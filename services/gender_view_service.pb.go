@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [GenderViewService.GetGenderView][google.ads.googleads.v0.services.GenderViewService.GetGenderView].
+// Request message for [GenderViewService.GetGenderView][google.ads.googleads.v9.services.GenderViewService.GetGenderView].
 type GetGenderViewRequest struct {
 	// The resource name of the gender view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetGenderViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetGenderViewRequest)(nil), "google.ads.googleads.v0.services.GetGenderViewRequest")
+	proto.RegisterType((*GetGenderViewRequest)(nil), "google.ads.googleads.v9.services.GetGenderViewRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewGenderViewServiceClient(cc *grpc.ClientConn) GenderViewServiceClient {
 
 func (c *genderViewServiceClient) GetGenderView(ctx context.Context, in *GetGenderViewRequest, opts ...grpc.CallOption) (*resources.GenderView, error) {
 	out := new(resources.GenderView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.GenderViewService/GetGenderView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GenderViewService/GetGenderView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _GenderViewService_GetGenderView_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.GenderViewService/GetGenderView",
+		FullMethod: "/google.ads.googleads.v9.services.GenderViewService/GetGenderView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GenderViewServiceServer).GetGenderView(ctx, req.(*GetGenderViewRequest))
@@ -162,7 +162,7 @@ func _GenderViewService_GetGenderView_Handler(srv interface{}, ctx context.Conte
 }
 
 var _GenderViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.GenderViewService",
+	ServiceName: "google.ads.googleads.v9.services.GenderViewService",
 	HandlerType: (*GenderViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

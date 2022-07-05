@@ -27,7 +27,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [AdGroupCriterionService.GetAdGroupCriterion][google.ads.googleads.v0.services.AdGroupCriterionService.GetAdGroupCriterion].
+// Request message for [AdGroupCriterionService.GetAdGroupCriterion][google.ads.googleads.v9.services.AdGroupCriterionService.GetAdGroupCriterion].
 type GetAdGroupCriterionRequest struct {
 	// The resource name of the criterion to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -68,7 +68,7 @@ func (m *GetAdGroupCriterionRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [AdGroupCriterionService.MutateAdGroupCriteria][google.ads.googleads.v0.services.AdGroupCriterionService.MutateAdGroupCriteria].
+// Request message for [AdGroupCriterionService.MutateAdGroupCriteria][google.ads.googleads.v9.services.AdGroupCriterionService.MutateAdGroupCriteria].
 type MutateAdGroupCriteriaRequest struct {
 	// ID of the customer whose criteria are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -342,11 +342,11 @@ func (m *MutateAdGroupCriterionResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetAdGroupCriterionRequest)(nil), "google.ads.googleads.v0.services.GetAdGroupCriterionRequest")
-	proto.RegisterType((*MutateAdGroupCriteriaRequest)(nil), "google.ads.googleads.v0.services.MutateAdGroupCriteriaRequest")
-	proto.RegisterType((*AdGroupCriterionOperation)(nil), "google.ads.googleads.v0.services.AdGroupCriterionOperation")
-	proto.RegisterType((*MutateAdGroupCriteriaResponse)(nil), "google.ads.googleads.v0.services.MutateAdGroupCriteriaResponse")
-	proto.RegisterType((*MutateAdGroupCriterionResult)(nil), "google.ads.googleads.v0.services.MutateAdGroupCriterionResult")
+	proto.RegisterType((*GetAdGroupCriterionRequest)(nil), "google.ads.googleads.v9.services.GetAdGroupCriterionRequest")
+	proto.RegisterType((*MutateAdGroupCriteriaRequest)(nil), "google.ads.googleads.v9.services.MutateAdGroupCriteriaRequest")
+	proto.RegisterType((*AdGroupCriterionOperation)(nil), "google.ads.googleads.v9.services.AdGroupCriterionOperation")
+	proto.RegisterType((*MutateAdGroupCriteriaResponse)(nil), "google.ads.googleads.v9.services.MutateAdGroupCriteriaResponse")
+	proto.RegisterType((*MutateAdGroupCriterionResult)(nil), "google.ads.googleads.v9.services.MutateAdGroupCriterionResult")
 }
 
 func init() {
@@ -431,7 +431,7 @@ func NewAdGroupCriterionServiceClient(cc *grpc.ClientConn) AdGroupCriterionServi
 
 func (c *adGroupCriterionServiceClient) GetAdGroupCriterion(ctx context.Context, in *GetAdGroupCriterionRequest, opts ...grpc.CallOption) (*resources.AdGroupCriterion, error) {
 	out := new(resources.AdGroupCriterion)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AdGroupCriterionService/GetAdGroupCriterion", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupCriterionService/GetAdGroupCriterion", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -440,7 +440,7 @@ func (c *adGroupCriterionServiceClient) GetAdGroupCriterion(ctx context.Context,
 
 func (c *adGroupCriterionServiceClient) MutateAdGroupCriteria(ctx context.Context, in *MutateAdGroupCriteriaRequest, opts ...grpc.CallOption) (*MutateAdGroupCriteriaResponse, error) {
 	out := new(MutateAdGroupCriteriaResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AdGroupCriterionService/MutateAdGroupCriteria", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupCriterionService/MutateAdGroupCriteria", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -469,7 +469,7 @@ func _AdGroupCriterionService_GetAdGroupCriterion_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AdGroupCriterionService/GetAdGroupCriterion",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupCriterionService/GetAdGroupCriterion",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupCriterionServiceServer).GetAdGroupCriterion(ctx, req.(*GetAdGroupCriterionRequest))
@@ -487,7 +487,7 @@ func _AdGroupCriterionService_MutateAdGroupCriteria_Handler(srv interface{}, ctx
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AdGroupCriterionService/MutateAdGroupCriteria",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupCriterionService/MutateAdGroupCriteria",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupCriterionServiceServer).MutateAdGroupCriteria(ctx, req.(*MutateAdGroupCriteriaRequest))
@@ -496,7 +496,7 @@ func _AdGroupCriterionService_MutateAdGroupCriteria_Handler(srv interface{}, ctx
 }
 
 var _AdGroupCriterionService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.AdGroupCriterionService",
+	ServiceName: "google.ads.googleads.v9.services.AdGroupCriterionService",
 	HandlerType: (*AdGroupCriterionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

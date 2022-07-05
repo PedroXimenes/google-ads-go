@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [HotelPerformanceViewService.GetHotelPerformanceView][google.ads.googleads.v0.services.HotelPerformanceViewService.GetHotelPerformanceView].
+// Request message for [HotelPerformanceViewService.GetHotelPerformanceView][google.ads.googleads.v9.services.HotelPerformanceViewService.GetHotelPerformanceView].
 type GetHotelPerformanceViewRequest struct {
 	// Resource name of the Hotel Performance View to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetHotelPerformanceViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetHotelPerformanceViewRequest)(nil), "google.ads.googleads.v0.services.GetHotelPerformanceViewRequest")
+	proto.RegisterType((*GetHotelPerformanceViewRequest)(nil), "google.ads.googleads.v9.services.GetHotelPerformanceViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewHotelPerformanceViewServiceClient(cc *grpc.ClientConn) HotelPerformanceV
 
 func (c *hotelPerformanceViewServiceClient) GetHotelPerformanceView(ctx context.Context, in *GetHotelPerformanceViewRequest, opts ...grpc.CallOption) (*resources.HotelPerformanceView, error) {
 	out := new(resources.HotelPerformanceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.HotelPerformanceViewService/GetHotelPerformanceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.HotelPerformanceViewService/GetHotelPerformanceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _HotelPerformanceViewService_GetHotelPerformanceView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.HotelPerformanceViewService/GetHotelPerformanceView",
+		FullMethod: "/google.ads.googleads.v9.services.HotelPerformanceViewService/GetHotelPerformanceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HotelPerformanceViewServiceServer).GetHotelPerformanceView(ctx, req.(*GetHotelPerformanceViewRequest))
@@ -163,7 +163,7 @@ func _HotelPerformanceViewService_GetHotelPerformanceView_Handler(srv interface{
 }
 
 var _HotelPerformanceViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.HotelPerformanceViewService",
+	ServiceName: "google.ads.googleads.v9.services.HotelPerformanceViewService",
 	HandlerType: (*HotelPerformanceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

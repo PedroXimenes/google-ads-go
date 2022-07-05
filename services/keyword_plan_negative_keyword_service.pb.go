@@ -28,7 +28,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Request message for
-// [KeywordPlanNegativeKeywordService.GetKeywordPlanNegativeKeyword][google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService.GetKeywordPlanNegativeKeyword].
+// [KeywordPlanNegativeKeywordService.GetKeywordPlanNegativeKeyword][google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService.GetKeywordPlanNegativeKeyword].
 type GetKeywordPlanNegativeKeywordRequest struct {
 	// The resource name of the plan to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -70,7 +70,7 @@ func (m *GetKeywordPlanNegativeKeywordRequest) GetResourceName() string {
 }
 
 // Request message for
-// [KeywordPlanNegativeKeywordService.MutateKeywordPlanNegativeKeywords][google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService.MutateKeywordPlanNegativeKeywords].
+// [KeywordPlanNegativeKeywordService.MutateKeywordPlanNegativeKeywords][google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService.MutateKeywordPlanNegativeKeywords].
 type MutateKeywordPlanNegativeKeywordsRequest struct {
 	// The ID of the customer whose negative keywords are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -353,11 +353,11 @@ func (m *MutateKeywordPlanNegativeKeywordResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetKeywordPlanNegativeKeywordRequest)(nil), "google.ads.googleads.v0.services.GetKeywordPlanNegativeKeywordRequest")
-	proto.RegisterType((*MutateKeywordPlanNegativeKeywordsRequest)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanNegativeKeywordsRequest")
-	proto.RegisterType((*KeywordPlanNegativeKeywordOperation)(nil), "google.ads.googleads.v0.services.KeywordPlanNegativeKeywordOperation")
-	proto.RegisterType((*MutateKeywordPlanNegativeKeywordsResponse)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanNegativeKeywordsResponse")
-	proto.RegisterType((*MutateKeywordPlanNegativeKeywordResult)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanNegativeKeywordResult")
+	proto.RegisterType((*GetKeywordPlanNegativeKeywordRequest)(nil), "google.ads.googleads.v9.services.GetKeywordPlanNegativeKeywordRequest")
+	proto.RegisterType((*MutateKeywordPlanNegativeKeywordsRequest)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanNegativeKeywordsRequest")
+	proto.RegisterType((*KeywordPlanNegativeKeywordOperation)(nil), "google.ads.googleads.v9.services.KeywordPlanNegativeKeywordOperation")
+	proto.RegisterType((*MutateKeywordPlanNegativeKeywordsResponse)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanNegativeKeywordsResponse")
+	proto.RegisterType((*MutateKeywordPlanNegativeKeywordResult)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanNegativeKeywordResult")
 }
 
 func init() {
@@ -443,7 +443,7 @@ func NewKeywordPlanNegativeKeywordServiceClient(cc *grpc.ClientConn) KeywordPlan
 
 func (c *keywordPlanNegativeKeywordServiceClient) GetKeywordPlanNegativeKeyword(ctx context.Context, in *GetKeywordPlanNegativeKeywordRequest, opts ...grpc.CallOption) (*resources.KeywordPlanNegativeKeyword, error) {
 	out := new(resources.KeywordPlanNegativeKeyword)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService/GetKeywordPlanNegativeKeyword", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService/GetKeywordPlanNegativeKeyword", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -452,7 +452,7 @@ func (c *keywordPlanNegativeKeywordServiceClient) GetKeywordPlanNegativeKeyword(
 
 func (c *keywordPlanNegativeKeywordServiceClient) MutateKeywordPlanNegativeKeywords(ctx context.Context, in *MutateKeywordPlanNegativeKeywordsRequest, opts ...grpc.CallOption) (*MutateKeywordPlanNegativeKeywordsResponse, error) {
 	out := new(MutateKeywordPlanNegativeKeywordsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService/MutateKeywordPlanNegativeKeywords", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService/MutateKeywordPlanNegativeKeywords", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -482,7 +482,7 @@ func _KeywordPlanNegativeKeywordService_GetKeywordPlanNegativeKeyword_Handler(sr
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService/GetKeywordPlanNegativeKeyword",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService/GetKeywordPlanNegativeKeyword",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanNegativeKeywordServiceServer).GetKeywordPlanNegativeKeyword(ctx, req.(*GetKeywordPlanNegativeKeywordRequest))
@@ -500,7 +500,7 @@ func _KeywordPlanNegativeKeywordService_MutateKeywordPlanNegativeKeywords_Handle
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService/MutateKeywordPlanNegativeKeywords",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService/MutateKeywordPlanNegativeKeywords",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanNegativeKeywordServiceServer).MutateKeywordPlanNegativeKeywords(ctx, req.(*MutateKeywordPlanNegativeKeywordsRequest))
@@ -509,7 +509,7 @@ func _KeywordPlanNegativeKeywordService_MutateKeywordPlanNegativeKeywords_Handle
 }
 
 var _KeywordPlanNegativeKeywordService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.KeywordPlanNegativeKeywordService",
+	ServiceName: "google.ads.googleads.v9.services.KeywordPlanNegativeKeywordService",
 	HandlerType: (*KeywordPlanNegativeKeywordServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

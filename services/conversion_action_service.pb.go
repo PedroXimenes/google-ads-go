@@ -342,11 +342,11 @@ func (m *MutateConversionActionResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetConversionActionRequest)(nil), "google.ads.googleads.v0.services.GetConversionActionRequest")
-	proto.RegisterType((*MutateConversionActionsRequest)(nil), "google.ads.googleads.v0.services.MutateConversionActionsRequest")
-	proto.RegisterType((*ConversionActionOperation)(nil), "google.ads.googleads.v0.services.ConversionActionOperation")
-	proto.RegisterType((*MutateConversionActionsResponse)(nil), "google.ads.googleads.v0.services.MutateConversionActionsResponse")
-	proto.RegisterType((*MutateConversionActionResult)(nil), "google.ads.googleads.v0.services.MutateConversionActionResult")
+	proto.RegisterType((*GetConversionActionRequest)(nil), "google.ads.googleads.v9.services.GetConversionActionRequest")
+	proto.RegisterType((*MutateConversionActionsRequest)(nil), "google.ads.googleads.v9.services.MutateConversionActionsRequest")
+	proto.RegisterType((*ConversionActionOperation)(nil), "google.ads.googleads.v9.services.ConversionActionOperation")
+	proto.RegisterType((*MutateConversionActionsResponse)(nil), "google.ads.googleads.v9.services.MutateConversionActionsResponse")
+	proto.RegisterType((*MutateConversionActionResult)(nil), "google.ads.googleads.v9.services.MutateConversionActionResult")
 }
 
 func init() {
@@ -431,7 +431,7 @@ func NewConversionActionServiceClient(cc *grpc.ClientConn) ConversionActionServi
 
 func (c *conversionActionServiceClient) GetConversionAction(ctx context.Context, in *GetConversionActionRequest, opts ...grpc.CallOption) (*resources.ConversionAction, error) {
 	out := new(resources.ConversionAction)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.ConversionActionService/GetConversionAction", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ConversionActionService/GetConversionAction", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -440,7 +440,7 @@ func (c *conversionActionServiceClient) GetConversionAction(ctx context.Context,
 
 func (c *conversionActionServiceClient) MutateConversionActions(ctx context.Context, in *MutateConversionActionsRequest, opts ...grpc.CallOption) (*MutateConversionActionsResponse, error) {
 	out := new(MutateConversionActionsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.ConversionActionService/MutateConversionActions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ConversionActionService/MutateConversionActions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -470,7 +470,7 @@ func _ConversionActionService_GetConversionAction_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.ConversionActionService/GetConversionAction",
+		FullMethod: "/google.ads.googleads.v9.services.ConversionActionService/GetConversionAction",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConversionActionServiceServer).GetConversionAction(ctx, req.(*GetConversionActionRequest))
@@ -488,7 +488,7 @@ func _ConversionActionService_MutateConversionActions_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.ConversionActionService/MutateConversionActions",
+		FullMethod: "/google.ads.googleads.v9.services.ConversionActionService/MutateConversionActions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ConversionActionServiceServer).MutateConversionActions(ctx, req.(*MutateConversionActionsRequest))
@@ -497,7 +497,7 @@ func _ConversionActionService_MutateConversionActions_Handler(srv interface{}, c
 }
 
 var _ConversionActionService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.ConversionActionService",
+	ServiceName: "google.ads.googleads.v9.services.ConversionActionService",
 	HandlerType: (*ConversionActionServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

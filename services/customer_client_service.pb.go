@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [CustomerClientService.GetCustomerClient][google.ads.googleads.v0.services.CustomerClientService.GetCustomerClient].
+// Request message for [CustomerClientService.GetCustomerClient][google.ads.googleads.v9.services.CustomerClientService.GetCustomerClient].
 type GetCustomerClientRequest struct {
 	// The resource name of the client to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetCustomerClientRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetCustomerClientRequest)(nil), "google.ads.googleads.v0.services.GetCustomerClientRequest")
+	proto.RegisterType((*GetCustomerClientRequest)(nil), "google.ads.googleads.v9.services.GetCustomerClientRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewCustomerClientServiceClient(cc *grpc.ClientConn) CustomerClientServiceCl
 
 func (c *customerClientServiceClient) GetCustomerClient(ctx context.Context, in *GetCustomerClientRequest, opts ...grpc.CallOption) (*resources.CustomerClient, error) {
 	out := new(resources.CustomerClient)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.CustomerClientService/GetCustomerClient", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerClientService/GetCustomerClient", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _CustomerClientService_GetCustomerClient_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.CustomerClientService/GetCustomerClient",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerClientService/GetCustomerClient",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerClientServiceServer).GetCustomerClient(ctx, req.(*GetCustomerClientRequest))
@@ -162,7 +162,7 @@ func _CustomerClientService_GetCustomerClient_Handler(srv interface{}, ctx conte
 }
 
 var _CustomerClientService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.CustomerClientService",
+	ServiceName: "google.ads.googleads.v9.services.CustomerClientService",
 	HandlerType: (*CustomerClientServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -25,7 +25,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Request message for
-// [MobileAppCategoryConstantService.GetMobileAppCategoryConstant][google.ads.googleads.v0.services.MobileAppCategoryConstantService.GetMobileAppCategoryConstant].
+// [MobileAppCategoryConstantService.GetMobileAppCategoryConstant][google.ads.googleads.v9.services.MobileAppCategoryConstantService.GetMobileAppCategoryConstant].
 type GetMobileAppCategoryConstantRequest struct {
 	// Resource name of the mobile app category constant to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -67,7 +67,7 @@ func (m *GetMobileAppCategoryConstantRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetMobileAppCategoryConstantRequest)(nil), "google.ads.googleads.v0.services.GetMobileAppCategoryConstantRequest")
+	proto.RegisterType((*GetMobileAppCategoryConstantRequest)(nil), "google.ads.googleads.v9.services.GetMobileAppCategoryConstantRequest")
 }
 
 func init() {
@@ -128,7 +128,7 @@ func NewMobileAppCategoryConstantServiceClient(cc *grpc.ClientConn) MobileAppCat
 
 func (c *mobileAppCategoryConstantServiceClient) GetMobileAppCategoryConstant(ctx context.Context, in *GetMobileAppCategoryConstantRequest, opts ...grpc.CallOption) (*resources.MobileAppCategoryConstant, error) {
 	out := new(resources.MobileAppCategoryConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -155,7 +155,7 @@ func _MobileAppCategoryConstantService_GetMobileAppCategoryConstant_Handler(srv 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant",
+		FullMethod: "/google.ads.googleads.v9.services.MobileAppCategoryConstantService/GetMobileAppCategoryConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MobileAppCategoryConstantServiceServer).GetMobileAppCategoryConstant(ctx, req.(*GetMobileAppCategoryConstantRequest))
@@ -164,7 +164,7 @@ func _MobileAppCategoryConstantService_GetMobileAppCategoryConstant_Handler(srv 
 }
 
 var _MobileAppCategoryConstantService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.MobileAppCategoryConstantService",
+	ServiceName: "google.ads.googleads.v9.services.MobileAppCategoryConstantService",
 	HandlerType: (*MobileAppCategoryConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

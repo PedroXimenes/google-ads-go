@@ -66,7 +66,7 @@ func (m *GetAdGroupAudienceViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetAdGroupAudienceViewRequest)(nil), "google.ads.googleads.v0.services.GetAdGroupAudienceViewRequest")
+	proto.RegisterType((*GetAdGroupAudienceViewRequest)(nil), "google.ads.googleads.v9.services.GetAdGroupAudienceViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewAdGroupAudienceViewServiceClient(cc *grpc.ClientConn) AdGroupAudienceVie
 
 func (c *adGroupAudienceViewServiceClient) GetAdGroupAudienceView(ctx context.Context, in *GetAdGroupAudienceViewRequest, opts ...grpc.CallOption) (*resources.AdGroupAudienceView, error) {
 	out := new(resources.AdGroupAudienceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AdGroupAudienceViewService/GetAdGroupAudienceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdGroupAudienceViewService/GetAdGroupAudienceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _AdGroupAudienceViewService_GetAdGroupAudienceView_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AdGroupAudienceViewService/GetAdGroupAudienceView",
+		FullMethod: "/google.ads.googleads.v9.services.AdGroupAudienceViewService/GetAdGroupAudienceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdGroupAudienceViewServiceServer).GetAdGroupAudienceView(ctx, req.(*GetAdGroupAudienceViewRequest))
@@ -163,7 +163,7 @@ func _AdGroupAudienceViewService_GetAdGroupAudienceView_Handler(srv interface{},
 }
 
 var _AdGroupAudienceViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.AdGroupAudienceViewService",
+	ServiceName: "google.ads.googleads.v9.services.AdGroupAudienceViewService",
 	HandlerType: (*AdGroupAudienceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [ProductGroupViewService.GetProductGroupView][google.ads.googleads.v0.services.ProductGroupViewService.GetProductGroupView].
+// Request message for [ProductGroupViewService.GetProductGroupView][google.ads.googleads.v9.services.ProductGroupViewService.GetProductGroupView].
 type GetProductGroupViewRequest struct {
 	// The resource name of the product group view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetProductGroupViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetProductGroupViewRequest)(nil), "google.ads.googleads.v0.services.GetProductGroupViewRequest")
+	proto.RegisterType((*GetProductGroupViewRequest)(nil), "google.ads.googleads.v9.services.GetProductGroupViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewProductGroupViewServiceClient(cc *grpc.ClientConn) ProductGroupViewServi
 
 func (c *productGroupViewServiceClient) GetProductGroupView(ctx context.Context, in *GetProductGroupViewRequest, opts ...grpc.CallOption) (*resources.ProductGroupView, error) {
 	out := new(resources.ProductGroupView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.ProductGroupViewService/GetProductGroupView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ProductGroupViewService/GetProductGroupView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _ProductGroupViewService_GetProductGroupView_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.ProductGroupViewService/GetProductGroupView",
+		FullMethod: "/google.ads.googleads.v9.services.ProductGroupViewService/GetProductGroupView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ProductGroupViewServiceServer).GetProductGroupView(ctx, req.(*GetProductGroupViewRequest))
@@ -163,7 +163,7 @@ func _ProductGroupViewService_GetProductGroupView_Handler(srv interface{}, ctx c
 }
 
 var _ProductGroupViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.ProductGroupViewService",
+	ServiceName: "google.ads.googleads.v9.services.ProductGroupViewService",
 	HandlerType: (*ProductGroupViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

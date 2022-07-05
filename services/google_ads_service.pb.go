@@ -27,7 +27,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [GoogleAdsService.Search][google.ads.googleads.v0.services.GoogleAdsService.Search].
+// Request message for [GoogleAdsService.Search][google.ads.googleads.v9.services.GoogleAdsService.Search].
 type SearchGoogleAdsRequest struct {
 	// The ID of the customer being queried.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -109,7 +109,7 @@ func (m *SearchGoogleAdsRequest) GetValidateOnly() bool {
 	return false
 }
 
-// Response message for [GoogleAdsService.Search][google.ads.googleads.v0.services.GoogleAdsService.Search].
+// Response message for [GoogleAdsService.Search][google.ads.googleads.v9.services.GoogleAdsService.Search].
 type SearchGoogleAdsResponse struct {
 	// The list of rows that matched the query.
 	Results []*GoogleAdsRow `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
@@ -762,7 +762,7 @@ func (m *GoogleAdsRow) GetSegments() *common.Segments {
 	return nil
 }
 
-// Request message for [GoogleAdsService.Mutate][google.ads.googleads.v0.services.GoogleAdsService.Mutate].
+// Request message for [GoogleAdsService.Mutate][google.ads.googleads.v9.services.GoogleAdsService.Mutate].
 type MutateGoogleAdsRequest struct {
 	// The ID of the customer whose resources are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -834,7 +834,7 @@ func (m *MutateGoogleAdsRequest) GetValidateOnly() bool {
 	return false
 }
 
-// Response message for [GoogleAdsService.Mutate][google.ads.googleads.v0.services.GoogleAdsService.Mutate].
+// Response message for [GoogleAdsService.Mutate][google.ads.googleads.v9.services.GoogleAdsService.Mutate].
 type MutateGoogleAdsResponse struct {
 	// Errors that pertain to operation failures in the partial failure mode.
 	// Returned only when partial_failure = true and all errors occur inside the
@@ -1414,13 +1414,13 @@ func (*MutateOperationResponse) XXX_OneofWrappers() []interface{} {
 }
 
 func init() {
-	proto.RegisterType((*SearchGoogleAdsRequest)(nil), "google.ads.googleads.v0.services.SearchGoogleAdsRequest")
-	proto.RegisterType((*SearchGoogleAdsResponse)(nil), "google.ads.googleads.v0.services.SearchGoogleAdsResponse")
-	proto.RegisterType((*GoogleAdsRow)(nil), "google.ads.googleads.v0.services.GoogleAdsRow")
-	proto.RegisterType((*MutateGoogleAdsRequest)(nil), "google.ads.googleads.v0.services.MutateGoogleAdsRequest")
-	proto.RegisterType((*MutateGoogleAdsResponse)(nil), "google.ads.googleads.v0.services.MutateGoogleAdsResponse")
-	proto.RegisterType((*MutateOperation)(nil), "google.ads.googleads.v0.services.MutateOperation")
-	proto.RegisterType((*MutateOperationResponse)(nil), "google.ads.googleads.v0.services.MutateOperationResponse")
+	proto.RegisterType((*SearchGoogleAdsRequest)(nil), "google.ads.googleads.v9.services.SearchGoogleAdsRequest")
+	proto.RegisterType((*SearchGoogleAdsResponse)(nil), "google.ads.googleads.v9.services.SearchGoogleAdsResponse")
+	proto.RegisterType((*GoogleAdsRow)(nil), "google.ads.googleads.v9.services.GoogleAdsRow")
+	proto.RegisterType((*MutateGoogleAdsRequest)(nil), "google.ads.googleads.v9.services.MutateGoogleAdsRequest")
+	proto.RegisterType((*MutateGoogleAdsResponse)(nil), "google.ads.googleads.v9.services.MutateGoogleAdsResponse")
+	proto.RegisterType((*MutateOperation)(nil), "google.ads.googleads.v9.services.MutateOperation")
+	proto.RegisterType((*MutateOperationResponse)(nil), "google.ads.googleads.v9.services.MutateOperationResponse")
 }
 
 func init() {
@@ -1661,7 +1661,7 @@ func NewGoogleAdsServiceClient(cc *grpc.ClientConn) GoogleAdsServiceClient {
 
 func (c *googleAdsServiceClient) Search(ctx context.Context, in *SearchGoogleAdsRequest, opts ...grpc.CallOption) (*SearchGoogleAdsResponse, error) {
 	out := new(SearchGoogleAdsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.GoogleAdsService/Search", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GoogleAdsService/Search", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1670,7 +1670,7 @@ func (c *googleAdsServiceClient) Search(ctx context.Context, in *SearchGoogleAds
 
 func (c *googleAdsServiceClient) Mutate(ctx context.Context, in *MutateGoogleAdsRequest, opts ...grpc.CallOption) (*MutateGoogleAdsResponse, error) {
 	out := new(MutateGoogleAdsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.GoogleAdsService/Mutate", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.GoogleAdsService/Mutate", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1699,7 +1699,7 @@ func _GoogleAdsService_Search_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.GoogleAdsService/Search",
+		FullMethod: "/google.ads.googleads.v9.services.GoogleAdsService/Search",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GoogleAdsServiceServer).Search(ctx, req.(*SearchGoogleAdsRequest))
@@ -1717,7 +1717,7 @@ func _GoogleAdsService_Mutate_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.GoogleAdsService/Mutate",
+		FullMethod: "/google.ads.googleads.v9.services.GoogleAdsService/Mutate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(GoogleAdsServiceServer).Mutate(ctx, req.(*MutateGoogleAdsRequest))
@@ -1726,7 +1726,7 @@ func _GoogleAdsService_Mutate_Handler(srv interface{}, ctx context.Context, dec 
 }
 
 var _GoogleAdsService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.GoogleAdsService",
+	ServiceName: "google.ads.googleads.v9.services.GoogleAdsService",
 	HandlerType: (*GoogleAdsServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

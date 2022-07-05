@@ -27,7 +27,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [RecommendationService.GetRecommendation][google.ads.googleads.v0.services.RecommendationService.GetRecommendation].
+// Request message for [RecommendationService.GetRecommendation][google.ads.googleads.v9.services.RecommendationService.GetRecommendation].
 type GetRecommendationRequest struct {
 	// The resource name of the recommendation to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -68,7 +68,7 @@ func (m *GetRecommendationRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v0.services.RecommendationService.ApplyRecommendation].
+// Request message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v9.services.RecommendationService.ApplyRecommendation].
 type ApplyRecommendationRequest struct {
 	// The ID of the customer with the recommendation.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -467,7 +467,7 @@ func (m *ApplyRecommendationOperation_TargetCpaOptInParameters) GetNewCampaignBu
 	return nil
 }
 
-// Response message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v0.services.RecommendationService.ApplyRecommendation].
+// Response message for [RecommendationService.ApplyRecommendation][google.ads.googleads.v9.services.RecommendationService.ApplyRecommendation].
 type ApplyRecommendationResponse struct {
 	// Results of operations to apply recommendations.
 	Results []*ApplyRecommendationResult `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
@@ -561,7 +561,7 @@ func (m *ApplyRecommendationResult) GetResourceName() string {
 	return ""
 }
 
-// Request message for [RecommendationService.DismissRecommendation][google.ads.googleads.v0.services.RecommendationService.DismissRecommendation].
+// Request message for [RecommendationService.DismissRecommendation][google.ads.googleads.v9.services.RecommendationService.DismissRecommendation].
 type DismissRecommendationRequest struct {
 	// The ID of the customer with the recommendation.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -670,7 +670,7 @@ func (m *DismissRecommendationRequest_DismissRecommendationOperation) GetResourc
 	return ""
 }
 
-// Response message for [RecommendationService.DismissRecommendation][google.ads.googleads.v0.services.RecommendationService.DismissRecommendation].
+// Response message for [RecommendationService.DismissRecommendation][google.ads.googleads.v9.services.RecommendationService.DismissRecommendation].
 type DismissRecommendationResponse struct {
 	// Results of operations to dismiss recommendations.
 	Results []*DismissRecommendationResponse_DismissRecommendationResult `protobuf:"bytes,1,rep,name=results,proto3" json:"results,omitempty"`
@@ -769,19 +769,19 @@ func (m *DismissRecommendationResponse_DismissRecommendationResult) GetResourceN
 }
 
 func init() {
-	proto.RegisterType((*GetRecommendationRequest)(nil), "google.ads.googleads.v0.services.GetRecommendationRequest")
-	proto.RegisterType((*ApplyRecommendationRequest)(nil), "google.ads.googleads.v0.services.ApplyRecommendationRequest")
-	proto.RegisterType((*ApplyRecommendationOperation)(nil), "google.ads.googleads.v0.services.ApplyRecommendationOperation")
-	proto.RegisterType((*ApplyRecommendationOperation_CampaignBudgetParameters)(nil), "google.ads.googleads.v0.services.ApplyRecommendationOperation.CampaignBudgetParameters")
-	proto.RegisterType((*ApplyRecommendationOperation_TextAdParameters)(nil), "google.ads.googleads.v0.services.ApplyRecommendationOperation.TextAdParameters")
-	proto.RegisterType((*ApplyRecommendationOperation_KeywordParameters)(nil), "google.ads.googleads.v0.services.ApplyRecommendationOperation.KeywordParameters")
-	proto.RegisterType((*ApplyRecommendationOperation_TargetCpaOptInParameters)(nil), "google.ads.googleads.v0.services.ApplyRecommendationOperation.TargetCpaOptInParameters")
-	proto.RegisterType((*ApplyRecommendationResponse)(nil), "google.ads.googleads.v0.services.ApplyRecommendationResponse")
-	proto.RegisterType((*ApplyRecommendationResult)(nil), "google.ads.googleads.v0.services.ApplyRecommendationResult")
-	proto.RegisterType((*DismissRecommendationRequest)(nil), "google.ads.googleads.v0.services.DismissRecommendationRequest")
-	proto.RegisterType((*DismissRecommendationRequest_DismissRecommendationOperation)(nil), "google.ads.googleads.v0.services.DismissRecommendationRequest.DismissRecommendationOperation")
-	proto.RegisterType((*DismissRecommendationResponse)(nil), "google.ads.googleads.v0.services.DismissRecommendationResponse")
-	proto.RegisterType((*DismissRecommendationResponse_DismissRecommendationResult)(nil), "google.ads.googleads.v0.services.DismissRecommendationResponse.DismissRecommendationResult")
+	proto.RegisterType((*GetRecommendationRequest)(nil), "google.ads.googleads.v9.services.GetRecommendationRequest")
+	proto.RegisterType((*ApplyRecommendationRequest)(nil), "google.ads.googleads.v9.services.ApplyRecommendationRequest")
+	proto.RegisterType((*ApplyRecommendationOperation)(nil), "google.ads.googleads.v9.services.ApplyRecommendationOperation")
+	proto.RegisterType((*ApplyRecommendationOperation_CampaignBudgetParameters)(nil), "google.ads.googleads.v9.services.ApplyRecommendationOperation.CampaignBudgetParameters")
+	proto.RegisterType((*ApplyRecommendationOperation_TextAdParameters)(nil), "google.ads.googleads.v9.services.ApplyRecommendationOperation.TextAdParameters")
+	proto.RegisterType((*ApplyRecommendationOperation_KeywordParameters)(nil), "google.ads.googleads.v9.services.ApplyRecommendationOperation.KeywordParameters")
+	proto.RegisterType((*ApplyRecommendationOperation_TargetCpaOptInParameters)(nil), "google.ads.googleads.v9.services.ApplyRecommendationOperation.TargetCpaOptInParameters")
+	proto.RegisterType((*ApplyRecommendationResponse)(nil), "google.ads.googleads.v9.services.ApplyRecommendationResponse")
+	proto.RegisterType((*ApplyRecommendationResult)(nil), "google.ads.googleads.v9.services.ApplyRecommendationResult")
+	proto.RegisterType((*DismissRecommendationRequest)(nil), "google.ads.googleads.v9.services.DismissRecommendationRequest")
+	proto.RegisterType((*DismissRecommendationRequest_DismissRecommendationOperation)(nil), "google.ads.googleads.v9.services.DismissRecommendationRequest.DismissRecommendationOperation")
+	proto.RegisterType((*DismissRecommendationResponse)(nil), "google.ads.googleads.v9.services.DismissRecommendationResponse")
+	proto.RegisterType((*DismissRecommendationResponse_DismissRecommendationResult)(nil), "google.ads.googleads.v9.services.DismissRecommendationResponse.DismissRecommendationResult")
 }
 
 func init() {
@@ -890,7 +890,7 @@ func NewRecommendationServiceClient(cc *grpc.ClientConn) RecommendationServiceCl
 
 func (c *recommendationServiceClient) GetRecommendation(ctx context.Context, in *GetRecommendationRequest, opts ...grpc.CallOption) (*resources.Recommendation, error) {
 	out := new(resources.Recommendation)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.RecommendationService/GetRecommendation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.RecommendationService/GetRecommendation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -899,7 +899,7 @@ func (c *recommendationServiceClient) GetRecommendation(ctx context.Context, in 
 
 func (c *recommendationServiceClient) ApplyRecommendation(ctx context.Context, in *ApplyRecommendationRequest, opts ...grpc.CallOption) (*ApplyRecommendationResponse, error) {
 	out := new(ApplyRecommendationResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.RecommendationService/ApplyRecommendation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.RecommendationService/ApplyRecommendation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -908,7 +908,7 @@ func (c *recommendationServiceClient) ApplyRecommendation(ctx context.Context, i
 
 func (c *recommendationServiceClient) DismissRecommendation(ctx context.Context, in *DismissRecommendationRequest, opts ...grpc.CallOption) (*DismissRecommendationResponse, error) {
 	out := new(DismissRecommendationResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.RecommendationService/DismissRecommendation", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.RecommendationService/DismissRecommendation", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -939,7 +939,7 @@ func _RecommendationService_GetRecommendation_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.RecommendationService/GetRecommendation",
+		FullMethod: "/google.ads.googleads.v9.services.RecommendationService/GetRecommendation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RecommendationServiceServer).GetRecommendation(ctx, req.(*GetRecommendationRequest))
@@ -957,7 +957,7 @@ func _RecommendationService_ApplyRecommendation_Handler(srv interface{}, ctx con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.RecommendationService/ApplyRecommendation",
+		FullMethod: "/google.ads.googleads.v9.services.RecommendationService/ApplyRecommendation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RecommendationServiceServer).ApplyRecommendation(ctx, req.(*ApplyRecommendationRequest))
@@ -975,7 +975,7 @@ func _RecommendationService_DismissRecommendation_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.RecommendationService/DismissRecommendation",
+		FullMethod: "/google.ads.googleads.v9.services.RecommendationService/DismissRecommendation",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(RecommendationServiceServer).DismissRecommendation(ctx, req.(*DismissRecommendationRequest))
@@ -984,7 +984,7 @@ func _RecommendationService_DismissRecommendation_Handler(srv interface{}, ctx c
 }
 
 var _RecommendationService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.RecommendationService",
+	ServiceName: "google.ads.googleads.v9.services.RecommendationService",
 	HandlerType: (*RecommendationServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

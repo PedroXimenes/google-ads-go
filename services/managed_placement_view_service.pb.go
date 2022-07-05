@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [ManagedPlacementViewService.GetManagedPlacementView][google.ads.googleads.v0.services.ManagedPlacementViewService.GetManagedPlacementView].
+// Request message for [ManagedPlacementViewService.GetManagedPlacementView][google.ads.googleads.v9.services.ManagedPlacementViewService.GetManagedPlacementView].
 type GetManagedPlacementViewRequest struct {
 	// The resource name of the Managed Placement View to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetManagedPlacementViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetManagedPlacementViewRequest)(nil), "google.ads.googleads.v0.services.GetManagedPlacementViewRequest")
+	proto.RegisterType((*GetManagedPlacementViewRequest)(nil), "google.ads.googleads.v9.services.GetManagedPlacementViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewManagedPlacementViewServiceClient(cc *grpc.ClientConn) ManagedPlacementV
 
 func (c *managedPlacementViewServiceClient) GetManagedPlacementView(ctx context.Context, in *GetManagedPlacementViewRequest, opts ...grpc.CallOption) (*resources.ManagedPlacementView, error) {
 	out := new(resources.ManagedPlacementView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.ManagedPlacementViewService/GetManagedPlacementView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.ManagedPlacementViewService/GetManagedPlacementView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _ManagedPlacementViewService_GetManagedPlacementView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.ManagedPlacementViewService/GetManagedPlacementView",
+		FullMethod: "/google.ads.googleads.v9.services.ManagedPlacementViewService/GetManagedPlacementView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(ManagedPlacementViewServiceServer).GetManagedPlacementView(ctx, req.(*GetManagedPlacementViewRequest))
@@ -163,7 +163,7 @@ func _ManagedPlacementViewService_GetManagedPlacementView_Handler(srv interface{
 }
 
 var _ManagedPlacementViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.ManagedPlacementViewService",
+	ServiceName: "google.ads.googleads.v9.services.ManagedPlacementViewService",
 	HandlerType: (*ManagedPlacementViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

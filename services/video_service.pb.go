@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [VideoService.GetVideo][google.ads.googleads.v0.services.VideoService.GetVideo].
+// Request message for [VideoService.GetVideo][google.ads.googleads.v9.services.VideoService.GetVideo].
 type GetVideoRequest struct {
 	// The resource name of the video to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetVideoRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetVideoRequest)(nil), "google.ads.googleads.v0.services.GetVideoRequest")
+	proto.RegisterType((*GetVideoRequest)(nil), "google.ads.googleads.v9.services.GetVideoRequest")
 }
 
 func init() {
@@ -125,7 +125,7 @@ func NewVideoServiceClient(cc *grpc.ClientConn) VideoServiceClient {
 
 func (c *videoServiceClient) GetVideo(ctx context.Context, in *GetVideoRequest, opts ...grpc.CallOption) (*resources.Video, error) {
 	out := new(resources.Video)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.VideoService/GetVideo", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.VideoService/GetVideo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -152,7 +152,7 @@ func _VideoService_GetVideo_Handler(srv interface{}, ctx context.Context, dec fu
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.VideoService/GetVideo",
+		FullMethod: "/google.ads.googleads.v9.services.VideoService/GetVideo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(VideoServiceServer).GetVideo(ctx, req.(*GetVideoRequest))
@@ -161,7 +161,7 @@ func _VideoService_GetVideo_Handler(srv interface{}, ctx context.Context, dec fu
 }
 
 var _VideoService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.VideoService",
+	ServiceName: "google.ads.googleads.v9.services.VideoService",
 	HandlerType: (*VideoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

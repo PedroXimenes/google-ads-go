@@ -25,7 +25,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Request message for
-// [OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant][google.ads.googleads.v0.services.OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant].
+// [OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant][google.ads.googleads.v9.services.OperatingSystemVersionConstantService.GetOperatingSystemVersionConstant].
 type GetOperatingSystemVersionConstantRequest struct {
 	// Resource name of the OS version to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -69,7 +69,7 @@ func (m *GetOperatingSystemVersionConstantRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetOperatingSystemVersionConstantRequest)(nil), "google.ads.googleads.v0.services.GetOperatingSystemVersionConstantRequest")
+	proto.RegisterType((*GetOperatingSystemVersionConstantRequest)(nil), "google.ads.googleads.v9.services.GetOperatingSystemVersionConstantRequest")
 }
 
 func init() {
@@ -130,7 +130,7 @@ func NewOperatingSystemVersionConstantServiceClient(cc *grpc.ClientConn) Operati
 
 func (c *operatingSystemVersionConstantServiceClient) GetOperatingSystemVersionConstant(ctx context.Context, in *GetOperatingSystemVersionConstantRequest, opts ...grpc.CallOption) (*resources.OperatingSystemVersionConstant, error) {
 	out := new(resources.OperatingSystemVersionConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -157,7 +157,7 @@ func _OperatingSystemVersionConstantService_GetOperatingSystemVersionConstant_Ha
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant",
+		FullMethod: "/google.ads.googleads.v9.services.OperatingSystemVersionConstantService/GetOperatingSystemVersionConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(OperatingSystemVersionConstantServiceServer).GetOperatingSystemVersionConstant(ctx, req.(*GetOperatingSystemVersionConstantRequest))
@@ -166,7 +166,7 @@ func _OperatingSystemVersionConstantService_GetOperatingSystemVersionConstant_Ha
 }
 
 var _OperatingSystemVersionConstantService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.OperatingSystemVersionConstantService",
+	ServiceName: "google.ads.googleads.v9.services.OperatingSystemVersionConstantService",
 	HandlerType: (*OperatingSystemVersionConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

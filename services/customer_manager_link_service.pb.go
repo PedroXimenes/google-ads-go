@@ -25,7 +25,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [CustomerManagerLinkService.GetCustomerManagerLink][google.ads.googleads.v0.services.CustomerManagerLinkService.GetCustomerManagerLink].
+// Request message for [CustomerManagerLinkService.GetCustomerManagerLink][google.ads.googleads.v9.services.CustomerManagerLinkService.GetCustomerManagerLink].
 type GetCustomerManagerLinkRequest struct {
 	// The resource name of the CustomerManagerLink to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetCustomerManagerLinkRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v0.services.CustomerManagerLinkService.MutateCustomerManagerLink].
+// Request message for [CustomerManagerLinkService.MutateCustomerManagerLink][google.ads.googleads.v9.services.CustomerManagerLinkService.MutateCustomerManagerLink].
 type MutateCustomerManagerLinkRequest struct {
 	// The ID of the customer whose customer manager links are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -280,11 +280,11 @@ func (m *MutateCustomerManagerLinkResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetCustomerManagerLinkRequest)(nil), "google.ads.googleads.v0.services.GetCustomerManagerLinkRequest")
-	proto.RegisterType((*MutateCustomerManagerLinkRequest)(nil), "google.ads.googleads.v0.services.MutateCustomerManagerLinkRequest")
-	proto.RegisterType((*CustomerManagerLinkOperation)(nil), "google.ads.googleads.v0.services.CustomerManagerLinkOperation")
-	proto.RegisterType((*MutateCustomerManagerLinkResponse)(nil), "google.ads.googleads.v0.services.MutateCustomerManagerLinkResponse")
-	proto.RegisterType((*MutateCustomerManagerLinkResult)(nil), "google.ads.googleads.v0.services.MutateCustomerManagerLinkResult")
+	proto.RegisterType((*GetCustomerManagerLinkRequest)(nil), "google.ads.googleads.v9.services.GetCustomerManagerLinkRequest")
+	proto.RegisterType((*MutateCustomerManagerLinkRequest)(nil), "google.ads.googleads.v9.services.MutateCustomerManagerLinkRequest")
+	proto.RegisterType((*CustomerManagerLinkOperation)(nil), "google.ads.googleads.v9.services.CustomerManagerLinkOperation")
+	proto.RegisterType((*MutateCustomerManagerLinkResponse)(nil), "google.ads.googleads.v9.services.MutateCustomerManagerLinkResponse")
+	proto.RegisterType((*MutateCustomerManagerLinkResult)(nil), "google.ads.googleads.v9.services.MutateCustomerManagerLinkResult")
 }
 
 func init() {
@@ -361,7 +361,7 @@ func NewCustomerManagerLinkServiceClient(cc *grpc.ClientConn) CustomerManagerLin
 
 func (c *customerManagerLinkServiceClient) GetCustomerManagerLink(ctx context.Context, in *GetCustomerManagerLinkRequest, opts ...grpc.CallOption) (*resources.CustomerManagerLink, error) {
 	out := new(resources.CustomerManagerLink)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.CustomerManagerLinkService/GetCustomerManagerLink", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerManagerLinkService/GetCustomerManagerLink", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -370,7 +370,7 @@ func (c *customerManagerLinkServiceClient) GetCustomerManagerLink(ctx context.Co
 
 func (c *customerManagerLinkServiceClient) MutateCustomerManagerLink(ctx context.Context, in *MutateCustomerManagerLinkRequest, opts ...grpc.CallOption) (*MutateCustomerManagerLinkResponse, error) {
 	out := new(MutateCustomerManagerLinkResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.CustomerManagerLinkService/MutateCustomerManagerLink", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CustomerManagerLinkService/MutateCustomerManagerLink", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -399,7 +399,7 @@ func _CustomerManagerLinkService_GetCustomerManagerLink_Handler(srv interface{},
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.CustomerManagerLinkService/GetCustomerManagerLink",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerManagerLinkService/GetCustomerManagerLink",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerManagerLinkServiceServer).GetCustomerManagerLink(ctx, req.(*GetCustomerManagerLinkRequest))
@@ -417,7 +417,7 @@ func _CustomerManagerLinkService_MutateCustomerManagerLink_Handler(srv interface
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.CustomerManagerLinkService/MutateCustomerManagerLink",
+		FullMethod: "/google.ads.googleads.v9.services.CustomerManagerLinkService/MutateCustomerManagerLink",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CustomerManagerLinkServiceServer).MutateCustomerManagerLink(ctx, req.(*MutateCustomerManagerLinkRequest))
@@ -426,7 +426,7 @@ func _CustomerManagerLinkService_MutateCustomerManagerLink_Handler(srv interface
 }
 
 var _CustomerManagerLinkService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.CustomerManagerLinkService",
+	ServiceName: "google.ads.googleads.v9.services.CustomerManagerLinkService",
 	HandlerType: (*CustomerManagerLinkServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

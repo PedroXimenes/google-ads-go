@@ -27,7 +27,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [KeywordPlanKeywordService.GetKeywordPlanKeyword][google.ads.googleads.v0.services.KeywordPlanKeywordService.GetKeywordPlanKeyword].
+// Request message for [KeywordPlanKeywordService.GetKeywordPlanKeyword][google.ads.googleads.v9.services.KeywordPlanKeywordService.GetKeywordPlanKeyword].
 type GetKeywordPlanKeywordRequest struct {
 	// The resource name of the ad group keyword to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -68,7 +68,7 @@ func (m *GetKeywordPlanKeywordRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [KeywordPlanKeywordService.MutateKeywordPlanKeywords][google.ads.googleads.v0.services.KeywordPlanKeywordService.MutateKeywordPlanKeywords].
+// Request message for [KeywordPlanKeywordService.MutateKeywordPlanKeywords][google.ads.googleads.v9.services.KeywordPlanKeywordService.MutateKeywordPlanKeywords].
 type MutateKeywordPlanKeywordsRequest struct {
 	// The ID of the customer whose Keyword Plan keywords are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -343,11 +343,11 @@ func (m *MutateKeywordPlanKeywordResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetKeywordPlanKeywordRequest)(nil), "google.ads.googleads.v0.services.GetKeywordPlanKeywordRequest")
-	proto.RegisterType((*MutateKeywordPlanKeywordsRequest)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanKeywordsRequest")
-	proto.RegisterType((*KeywordPlanKeywordOperation)(nil), "google.ads.googleads.v0.services.KeywordPlanKeywordOperation")
-	proto.RegisterType((*MutateKeywordPlanKeywordsResponse)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanKeywordsResponse")
-	proto.RegisterType((*MutateKeywordPlanKeywordResult)(nil), "google.ads.googleads.v0.services.MutateKeywordPlanKeywordResult")
+	proto.RegisterType((*GetKeywordPlanKeywordRequest)(nil), "google.ads.googleads.v9.services.GetKeywordPlanKeywordRequest")
+	proto.RegisterType((*MutateKeywordPlanKeywordsRequest)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanKeywordsRequest")
+	proto.RegisterType((*KeywordPlanKeywordOperation)(nil), "google.ads.googleads.v9.services.KeywordPlanKeywordOperation")
+	proto.RegisterType((*MutateKeywordPlanKeywordsResponse)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanKeywordsResponse")
+	proto.RegisterType((*MutateKeywordPlanKeywordResult)(nil), "google.ads.googleads.v9.services.MutateKeywordPlanKeywordResult")
 }
 
 func init() {
@@ -433,7 +433,7 @@ func NewKeywordPlanKeywordServiceClient(cc *grpc.ClientConn) KeywordPlanKeywordS
 
 func (c *keywordPlanKeywordServiceClient) GetKeywordPlanKeyword(ctx context.Context, in *GetKeywordPlanKeywordRequest, opts ...grpc.CallOption) (*resources.KeywordPlanKeyword, error) {
 	out := new(resources.KeywordPlanKeyword)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordPlanKeywordService/GetKeywordPlanKeyword", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanKeywordService/GetKeywordPlanKeyword", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -442,7 +442,7 @@ func (c *keywordPlanKeywordServiceClient) GetKeywordPlanKeyword(ctx context.Cont
 
 func (c *keywordPlanKeywordServiceClient) MutateKeywordPlanKeywords(ctx context.Context, in *MutateKeywordPlanKeywordsRequest, opts ...grpc.CallOption) (*MutateKeywordPlanKeywordsResponse, error) {
 	out := new(MutateKeywordPlanKeywordsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordPlanKeywordService/MutateKeywordPlanKeywords", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanKeywordService/MutateKeywordPlanKeywords", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -472,7 +472,7 @@ func _KeywordPlanKeywordService_GetKeywordPlanKeyword_Handler(srv interface{}, c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordPlanKeywordService/GetKeywordPlanKeyword",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanKeywordService/GetKeywordPlanKeyword",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanKeywordServiceServer).GetKeywordPlanKeyword(ctx, req.(*GetKeywordPlanKeywordRequest))
@@ -490,7 +490,7 @@ func _KeywordPlanKeywordService_MutateKeywordPlanKeywords_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordPlanKeywordService/MutateKeywordPlanKeywords",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanKeywordService/MutateKeywordPlanKeywords",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanKeywordServiceServer).MutateKeywordPlanKeywords(ctx, req.(*MutateKeywordPlanKeywordsRequest))
@@ -499,7 +499,7 @@ func _KeywordPlanKeywordService_MutateKeywordPlanKeywords_Handler(srv interface{
 }
 
 var _KeywordPlanKeywordService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.KeywordPlanKeywordService",
+	ServiceName: "google.ads.googleads.v9.services.KeywordPlanKeywordService",
 	HandlerType: (*KeywordPlanKeywordServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

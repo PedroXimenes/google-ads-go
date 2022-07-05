@@ -25,7 +25,7 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Request message for
-// [AccountBudgetService.GetAccountBudget][google.ads.googleads.v0.services.AccountBudgetService.GetAccountBudget].
+// [AccountBudgetService.GetAccountBudget][google.ads.googleads.v9.services.AccountBudgetService.GetAccountBudget].
 type GetAccountBudgetRequest struct {
 	// The resource name of the account-level budget to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -67,7 +67,7 @@ func (m *GetAccountBudgetRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetAccountBudgetRequest)(nil), "google.ads.googleads.v0.services.GetAccountBudgetRequest")
+	proto.RegisterType((*GetAccountBudgetRequest)(nil), "google.ads.googleads.v9.services.GetAccountBudgetRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewAccountBudgetServiceClient(cc *grpc.ClientConn) AccountBudgetServiceClie
 
 func (c *accountBudgetServiceClient) GetAccountBudget(ctx context.Context, in *GetAccountBudgetRequest, opts ...grpc.CallOption) (*resources.AccountBudget, error) {
 	out := new(resources.AccountBudget)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AccountBudgetService/GetAccountBudget", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AccountBudgetService/GetAccountBudget", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _AccountBudgetService_GetAccountBudget_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AccountBudgetService/GetAccountBudget",
+		FullMethod: "/google.ads.googleads.v9.services.AccountBudgetService/GetAccountBudget",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AccountBudgetServiceServer).GetAccountBudget(ctx, req.(*GetAccountBudgetRequest))
@@ -163,7 +163,7 @@ func _AccountBudgetService_GetAccountBudget_Handler(srv interface{}, ctx context
 }
 
 var _AccountBudgetService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.AccountBudgetService",
+	ServiceName: "google.ads.googleads.v9.services.AccountBudgetService",
 	HandlerType: (*AccountBudgetServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -389,12 +389,12 @@ func (m *GenerateKeywordIdeaResult) GetKeywordIdeaMetrics() *common.KeywordPlanH
 }
 
 func init() {
-	proto.RegisterType((*GenerateKeywordIdeasRequest)(nil), "google.ads.googleads.v0.services.GenerateKeywordIdeasRequest")
-	proto.RegisterType((*KeywordAndUrlSeed)(nil), "google.ads.googleads.v0.services.KeywordAndUrlSeed")
-	proto.RegisterType((*KeywordSeed)(nil), "google.ads.googleads.v0.services.KeywordSeed")
-	proto.RegisterType((*UrlSeed)(nil), "google.ads.googleads.v0.services.UrlSeed")
-	proto.RegisterType((*GenerateKeywordIdeaResponse)(nil), "google.ads.googleads.v0.services.GenerateKeywordIdeaResponse")
-	proto.RegisterType((*GenerateKeywordIdeaResult)(nil), "google.ads.googleads.v0.services.GenerateKeywordIdeaResult")
+	proto.RegisterType((*GenerateKeywordIdeasRequest)(nil), "google.ads.googleads.v9.services.GenerateKeywordIdeasRequest")
+	proto.RegisterType((*KeywordAndUrlSeed)(nil), "google.ads.googleads.v9.services.KeywordAndUrlSeed")
+	proto.RegisterType((*KeywordSeed)(nil), "google.ads.googleads.v9.services.KeywordSeed")
+	proto.RegisterType((*UrlSeed)(nil), "google.ads.googleads.v9.services.UrlSeed")
+	proto.RegisterType((*GenerateKeywordIdeaResponse)(nil), "google.ads.googleads.v9.services.GenerateKeywordIdeaResponse")
+	proto.RegisterType((*GenerateKeywordIdeaResult)(nil), "google.ads.googleads.v9.services.GenerateKeywordIdeaResult")
 }
 
 func init() {
@@ -477,7 +477,7 @@ func NewKeywordPlanIdeaServiceClient(cc *grpc.ClientConn) KeywordPlanIdeaService
 
 func (c *keywordPlanIdeaServiceClient) GenerateKeywordIdeas(ctx context.Context, in *GenerateKeywordIdeasRequest, opts ...grpc.CallOption) (*GenerateKeywordIdeaResponse, error) {
 	out := new(GenerateKeywordIdeaResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordPlanIdeaService/GenerateKeywordIdeas", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordPlanIdeaService/GenerateKeywordIdeas", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -504,7 +504,7 @@ func _KeywordPlanIdeaService_GenerateKeywordIdeas_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordPlanIdeaService/GenerateKeywordIdeas",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordPlanIdeaService/GenerateKeywordIdeas",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordPlanIdeaServiceServer).GenerateKeywordIdeas(ctx, req.(*GenerateKeywordIdeasRequest))
@@ -513,7 +513,7 @@ func _KeywordPlanIdeaService_GenerateKeywordIdeas_Handler(srv interface{}, ctx c
 }
 
 var _KeywordPlanIdeaService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.KeywordPlanIdeaService",
+	ServiceName: "google.ads.googleads.v9.services.KeywordPlanIdeaService",
 	HandlerType: (*KeywordPlanIdeaServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [AgeRangeViewService.GetAgeRangeView][google.ads.googleads.v0.services.AgeRangeViewService.GetAgeRangeView].
+// Request message for [AgeRangeViewService.GetAgeRangeView][google.ads.googleads.v9.services.AgeRangeViewService.GetAgeRangeView].
 type GetAgeRangeViewRequest struct {
 	// The resource name of the age range view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetAgeRangeViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetAgeRangeViewRequest)(nil), "google.ads.googleads.v0.services.GetAgeRangeViewRequest")
+	proto.RegisterType((*GetAgeRangeViewRequest)(nil), "google.ads.googleads.v9.services.GetAgeRangeViewRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewAgeRangeViewServiceClient(cc *grpc.ClientConn) AgeRangeViewServiceClient
 
 func (c *ageRangeViewServiceClient) GetAgeRangeView(ctx context.Context, in *GetAgeRangeViewRequest, opts ...grpc.CallOption) (*resources.AgeRangeView, error) {
 	out := new(resources.AgeRangeView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AgeRangeViewService/GetAgeRangeView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AgeRangeViewService/GetAgeRangeView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _AgeRangeViewService_GetAgeRangeView_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AgeRangeViewService/GetAgeRangeView",
+		FullMethod: "/google.ads.googleads.v9.services.AgeRangeViewService/GetAgeRangeView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AgeRangeViewServiceServer).GetAgeRangeView(ctx, req.(*GetAgeRangeViewRequest))
@@ -162,7 +162,7 @@ func _AgeRangeViewService_GetAgeRangeView_Handler(srv interface{}, ctx context.C
 }
 
 var _AgeRangeViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.AgeRangeViewService",
+	ServiceName: "google.ads.googleads.v9.services.AgeRangeViewService",
 	HandlerType: (*AgeRangeViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

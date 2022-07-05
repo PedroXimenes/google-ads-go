@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [MobileDeviceConstantService.GetMobileDeviceConstant][google.ads.googleads.v0.services.MobileDeviceConstantService.GetMobileDeviceConstant].
+// Request message for [MobileDeviceConstantService.GetMobileDeviceConstant][google.ads.googleads.v9.services.MobileDeviceConstantService.GetMobileDeviceConstant].
 type GetMobileDeviceConstantRequest struct {
 	// Resource name of the mobile device to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetMobileDeviceConstantRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetMobileDeviceConstantRequest)(nil), "google.ads.googleads.v0.services.GetMobileDeviceConstantRequest")
+	proto.RegisterType((*GetMobileDeviceConstantRequest)(nil), "google.ads.googleads.v9.services.GetMobileDeviceConstantRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewMobileDeviceConstantServiceClient(cc *grpc.ClientConn) MobileDeviceConst
 
 func (c *mobileDeviceConstantServiceClient) GetMobileDeviceConstant(ctx context.Context, in *GetMobileDeviceConstantRequest, opts ...grpc.CallOption) (*resources.MobileDeviceConstant, error) {
 	out := new(resources.MobileDeviceConstant)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.MobileDeviceConstantService/GetMobileDeviceConstant", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.MobileDeviceConstantService/GetMobileDeviceConstant", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _MobileDeviceConstantService_GetMobileDeviceConstant_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.MobileDeviceConstantService/GetMobileDeviceConstant",
+		FullMethod: "/google.ads.googleads.v9.services.MobileDeviceConstantService/GetMobileDeviceConstant",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(MobileDeviceConstantServiceServer).GetMobileDeviceConstant(ctx, req.(*GetMobileDeviceConstantRequest))
@@ -162,7 +162,7 @@ func _MobileDeviceConstantService_GetMobileDeviceConstant_Handler(srv interface{
 }
 
 var _MobileDeviceConstantService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.MobileDeviceConstantService",
+	ServiceName: "google.ads.googleads.v9.services.MobileDeviceConstantService",
 	HandlerType: (*MobileDeviceConstantServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

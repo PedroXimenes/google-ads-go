@@ -26,7 +26,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [FeedMappingService.GetFeedMapping][google.ads.googleads.v0.services.FeedMappingService.GetFeedMapping].
+// Request message for [FeedMappingService.GetFeedMapping][google.ads.googleads.v9.services.FeedMappingService.GetFeedMapping].
 type GetFeedMappingRequest struct {
 	// The resource name of the feed mapping to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -67,7 +67,7 @@ func (m *GetFeedMappingRequest) GetResourceName() string {
 	return ""
 }
 
-// Request message for [FeedMappingService.MutateFeedMappings][google.ads.googleads.v0.services.FeedMappingService.MutateFeedMappings].
+// Request message for [FeedMappingService.MutateFeedMappings][google.ads.googleads.v9.services.FeedMappingService.MutateFeedMappings].
 type MutateFeedMappingsRequest struct {
 	// The ID of the customer whose feed mappings are being modified.
 	CustomerId string `protobuf:"bytes,1,opt,name=customer_id,json=customerId,proto3" json:"customer_id,omitempty"`
@@ -317,11 +317,11 @@ func (m *MutateFeedMappingResult) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetFeedMappingRequest)(nil), "google.ads.googleads.v0.services.GetFeedMappingRequest")
-	proto.RegisterType((*MutateFeedMappingsRequest)(nil), "google.ads.googleads.v0.services.MutateFeedMappingsRequest")
-	proto.RegisterType((*FeedMappingOperation)(nil), "google.ads.googleads.v0.services.FeedMappingOperation")
-	proto.RegisterType((*MutateFeedMappingsResponse)(nil), "google.ads.googleads.v0.services.MutateFeedMappingsResponse")
-	proto.RegisterType((*MutateFeedMappingResult)(nil), "google.ads.googleads.v0.services.MutateFeedMappingResult")
+	proto.RegisterType((*GetFeedMappingRequest)(nil), "google.ads.googleads.v9.services.GetFeedMappingRequest")
+	proto.RegisterType((*MutateFeedMappingsRequest)(nil), "google.ads.googleads.v9.services.MutateFeedMappingsRequest")
+	proto.RegisterType((*FeedMappingOperation)(nil), "google.ads.googleads.v9.services.FeedMappingOperation")
+	proto.RegisterType((*MutateFeedMappingsResponse)(nil), "google.ads.googleads.v9.services.MutateFeedMappingsResponse")
+	proto.RegisterType((*MutateFeedMappingResult)(nil), "google.ads.googleads.v9.services.MutateFeedMappingResult")
 }
 
 func init() {
@@ -403,7 +403,7 @@ func NewFeedMappingServiceClient(cc *grpc.ClientConn) FeedMappingServiceClient {
 
 func (c *feedMappingServiceClient) GetFeedMapping(ctx context.Context, in *GetFeedMappingRequest, opts ...grpc.CallOption) (*resources.FeedMapping, error) {
 	out := new(resources.FeedMapping)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.FeedMappingService/GetFeedMapping", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.FeedMappingService/GetFeedMapping", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -412,7 +412,7 @@ func (c *feedMappingServiceClient) GetFeedMapping(ctx context.Context, in *GetFe
 
 func (c *feedMappingServiceClient) MutateFeedMappings(ctx context.Context, in *MutateFeedMappingsRequest, opts ...grpc.CallOption) (*MutateFeedMappingsResponse, error) {
 	out := new(MutateFeedMappingsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.FeedMappingService/MutateFeedMappings", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.FeedMappingService/MutateFeedMappings", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -442,7 +442,7 @@ func _FeedMappingService_GetFeedMapping_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.FeedMappingService/GetFeedMapping",
+		FullMethod: "/google.ads.googleads.v9.services.FeedMappingService/GetFeedMapping",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FeedMappingServiceServer).GetFeedMapping(ctx, req.(*GetFeedMappingRequest))
@@ -460,7 +460,7 @@ func _FeedMappingService_MutateFeedMappings_Handler(srv interface{}, ctx context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.FeedMappingService/MutateFeedMappings",
+		FullMethod: "/google.ads.googleads.v9.services.FeedMappingService/MutateFeedMappings",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(FeedMappingServiceServer).MutateFeedMappings(ctx, req.(*MutateFeedMappingsRequest))
@@ -469,7 +469,7 @@ func _FeedMappingService_MutateFeedMappings_Handler(srv interface{}, ctx context
 }
 
 var _FeedMappingService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.FeedMappingService",
+	ServiceName: "google.ads.googleads.v9.services.FeedMappingService",
 	HandlerType: (*FeedMappingServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

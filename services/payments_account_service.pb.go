@@ -65,7 +65,7 @@ func (m *ListPaymentsAccountsRequest) GetCustomerId() string {
 	return ""
 }
 
-// Response message for [PaymentsAccountService.ListPaymentsAccounts][google.ads.googleads.v0.services.PaymentsAccountService.ListPaymentsAccounts].
+// Response message for [PaymentsAccountService.ListPaymentsAccounts][google.ads.googleads.v9.services.PaymentsAccountService.ListPaymentsAccounts].
 type ListPaymentsAccountsResponse struct {
 	// The list of accessible Payments accounts.
 	PaymentsAccounts     []*resources.PaymentsAccount `protobuf:"bytes,1,rep,name=payments_accounts,json=paymentsAccounts,proto3" json:"payments_accounts,omitempty"`
@@ -107,8 +107,8 @@ func (m *ListPaymentsAccountsResponse) GetPaymentsAccounts() []*resources.Paymen
 }
 
 func init() {
-	proto.RegisterType((*ListPaymentsAccountsRequest)(nil), "google.ads.googleads.v0.services.ListPaymentsAccountsRequest")
-	proto.RegisterType((*ListPaymentsAccountsResponse)(nil), "google.ads.googleads.v0.services.ListPaymentsAccountsResponse")
+	proto.RegisterType((*ListPaymentsAccountsRequest)(nil), "google.ads.googleads.v9.services.ListPaymentsAccountsRequest")
+	proto.RegisterType((*ListPaymentsAccountsResponse)(nil), "google.ads.googleads.v9.services.ListPaymentsAccountsResponse")
 }
 
 func init() {
@@ -172,7 +172,7 @@ func NewPaymentsAccountServiceClient(cc *grpc.ClientConn) PaymentsAccountService
 
 func (c *paymentsAccountServiceClient) ListPaymentsAccounts(ctx context.Context, in *ListPaymentsAccountsRequest, opts ...grpc.CallOption) (*ListPaymentsAccountsResponse, error) {
 	out := new(ListPaymentsAccountsResponse)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.PaymentsAccountService/ListPaymentsAccounts", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.PaymentsAccountService/ListPaymentsAccounts", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -201,7 +201,7 @@ func _PaymentsAccountService_ListPaymentsAccounts_Handler(srv interface{}, ctx c
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.PaymentsAccountService/ListPaymentsAccounts",
+		FullMethod: "/google.ads.googleads.v9.services.PaymentsAccountService/ListPaymentsAccounts",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaymentsAccountServiceServer).ListPaymentsAccounts(ctx, req.(*ListPaymentsAccountsRequest))
@@ -210,7 +210,7 @@ func _PaymentsAccountService_ListPaymentsAccounts_Handler(srv interface{}, ctx c
 }
 
 var _PaymentsAccountService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.PaymentsAccountService",
+	ServiceName: "google.ads.googleads.v9.services.PaymentsAccountService",
 	HandlerType: (*PaymentsAccountServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

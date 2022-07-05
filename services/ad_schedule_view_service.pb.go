@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [AdScheduleViewService.GetAdScheduleView][google.ads.googleads.v0.services.AdScheduleViewService.GetAdScheduleView].
+// Request message for [AdScheduleViewService.GetAdScheduleView][google.ads.googleads.v9.services.AdScheduleViewService.GetAdScheduleView].
 type GetAdScheduleViewRequest struct {
 	// The resource name of the ad schedule view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetAdScheduleViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetAdScheduleViewRequest)(nil), "google.ads.googleads.v0.services.GetAdScheduleViewRequest")
+	proto.RegisterType((*GetAdScheduleViewRequest)(nil), "google.ads.googleads.v9.services.GetAdScheduleViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewAdScheduleViewServiceClient(cc *grpc.ClientConn) AdScheduleViewServiceCl
 
 func (c *adScheduleViewServiceClient) GetAdScheduleView(ctx context.Context, in *GetAdScheduleViewRequest, opts ...grpc.CallOption) (*resources.AdScheduleView, error) {
 	out := new(resources.AdScheduleView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.AdScheduleViewService/GetAdScheduleView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.AdScheduleViewService/GetAdScheduleView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _AdScheduleViewService_GetAdScheduleView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.AdScheduleViewService/GetAdScheduleView",
+		FullMethod: "/google.ads.googleads.v9.services.AdScheduleViewService/GetAdScheduleView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(AdScheduleViewServiceServer).GetAdScheduleView(ctx, req.(*GetAdScheduleViewRequest))
@@ -163,7 +163,7 @@ func _AdScheduleViewService_GetAdScheduleView_Handler(srv interface{}, ctx conte
 }
 
 var _AdScheduleViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.AdScheduleViewService",
+	ServiceName: "google.ads.googleads.v9.services.AdScheduleViewService",
 	HandlerType: (*AdScheduleViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

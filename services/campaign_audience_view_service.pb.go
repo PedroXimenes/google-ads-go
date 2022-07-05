@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [CampaignAudienceViewService.GetCampaignAudienceView][google.ads.googleads.v0.services.CampaignAudienceViewService.GetCampaignAudienceView].
+// Request message for [CampaignAudienceViewService.GetCampaignAudienceView][google.ads.googleads.v9.services.CampaignAudienceViewService.GetCampaignAudienceView].
 type GetCampaignAudienceViewRequest struct {
 	// The resource name of the campaign audience view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetCampaignAudienceViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetCampaignAudienceViewRequest)(nil), "google.ads.googleads.v0.services.GetCampaignAudienceViewRequest")
+	proto.RegisterType((*GetCampaignAudienceViewRequest)(nil), "google.ads.googleads.v9.services.GetCampaignAudienceViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewCampaignAudienceViewServiceClient(cc *grpc.ClientConn) CampaignAudienceV
 
 func (c *campaignAudienceViewServiceClient) GetCampaignAudienceView(ctx context.Context, in *GetCampaignAudienceViewRequest, opts ...grpc.CallOption) (*resources.CampaignAudienceView, error) {
 	out := new(resources.CampaignAudienceView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.CampaignAudienceViewService/GetCampaignAudienceView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.CampaignAudienceViewService/GetCampaignAudienceView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _CampaignAudienceViewService_GetCampaignAudienceView_Handler(srv interface{
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.CampaignAudienceViewService/GetCampaignAudienceView",
+		FullMethod: "/google.ads.googleads.v9.services.CampaignAudienceViewService/GetCampaignAudienceView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CampaignAudienceViewServiceServer).GetCampaignAudienceView(ctx, req.(*GetCampaignAudienceViewRequest))
@@ -163,7 +163,7 @@ func _CampaignAudienceViewService_GetCampaignAudienceView_Handler(srv interface{
 }
 
 var _CampaignAudienceViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.CampaignAudienceViewService",
+	ServiceName: "google.ads.googleads.v9.services.CampaignAudienceViewService",
 	HandlerType: (*CampaignAudienceViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

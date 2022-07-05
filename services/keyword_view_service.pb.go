@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [KeywordViewService.GetKeywordView][google.ads.googleads.v0.services.KeywordViewService.GetKeywordView].
+// Request message for [KeywordViewService.GetKeywordView][google.ads.googleads.v9.services.KeywordViewService.GetKeywordView].
 type GetKeywordViewRequest struct {
 	// The resource name of the keyword view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetKeywordViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetKeywordViewRequest)(nil), "google.ads.googleads.v0.services.GetKeywordViewRequest")
+	proto.RegisterType((*GetKeywordViewRequest)(nil), "google.ads.googleads.v9.services.GetKeywordViewRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewKeywordViewServiceClient(cc *grpc.ClientConn) KeywordViewServiceClient {
 
 func (c *keywordViewServiceClient) GetKeywordView(ctx context.Context, in *GetKeywordViewRequest, opts ...grpc.CallOption) (*resources.KeywordView, error) {
 	out := new(resources.KeywordView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.KeywordViewService/GetKeywordView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.KeywordViewService/GetKeywordView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _KeywordViewService_GetKeywordView_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.KeywordViewService/GetKeywordView",
+		FullMethod: "/google.ads.googleads.v9.services.KeywordViewService/GetKeywordView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(KeywordViewServiceServer).GetKeywordView(ctx, req.(*GetKeywordViewRequest))
@@ -162,7 +162,7 @@ func _KeywordViewService_GetKeywordView_Handler(srv interface{}, ctx context.Con
 }
 
 var _KeywordViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.KeywordViewService",
+	ServiceName: "google.ads.googleads.v9.services.KeywordViewService",
 	HandlerType: (*KeywordViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

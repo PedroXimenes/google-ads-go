@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [UserInterestService.GetUserInterest][google.ads.googleads.v0.services.UserInterestService.GetUserInterest].
+// Request message for [UserInterestService.GetUserInterest][google.ads.googleads.v9.services.UserInterestService.GetUserInterest].
 type GetUserInterestRequest struct {
 	// Resource name of the UserInterest to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetUserInterestRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetUserInterestRequest)(nil), "google.ads.googleads.v0.services.GetUserInterestRequest")
+	proto.RegisterType((*GetUserInterestRequest)(nil), "google.ads.googleads.v9.services.GetUserInterestRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewUserInterestServiceClient(cc *grpc.ClientConn) UserInterestServiceClient
 
 func (c *userInterestServiceClient) GetUserInterest(ctx context.Context, in *GetUserInterestRequest, opts ...grpc.CallOption) (*resources.UserInterest, error) {
 	out := new(resources.UserInterest)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.UserInterestService/GetUserInterest", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.UserInterestService/GetUserInterest", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _UserInterestService_GetUserInterest_Handler(srv interface{}, ctx context.C
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.UserInterestService/GetUserInterest",
+		FullMethod: "/google.ads.googleads.v9.services.UserInterestService/GetUserInterest",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserInterestServiceServer).GetUserInterest(ctx, req.(*GetUserInterestRequest))
@@ -162,7 +162,7 @@ func _UserInterestService_GetUserInterest_Handler(srv interface{}, ctx context.C
 }
 
 var _UserInterestService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.UserInterestService",
+	ServiceName: "google.ads.googleads.v9.services.UserInterestService",
 	HandlerType: (*UserInterestServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [TopicViewService.GetTopicView][google.ads.googleads.v0.services.TopicViewService.GetTopicView].
+// Request message for [TopicViewService.GetTopicView][google.ads.googleads.v9.services.TopicViewService.GetTopicView].
 type GetTopicViewRequest struct {
 	// The resource name of the topic view to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetTopicViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetTopicViewRequest)(nil), "google.ads.googleads.v0.services.GetTopicViewRequest")
+	proto.RegisterType((*GetTopicViewRequest)(nil), "google.ads.googleads.v9.services.GetTopicViewRequest")
 }
 
 func init() {
@@ -126,7 +126,7 @@ func NewTopicViewServiceClient(cc *grpc.ClientConn) TopicViewServiceClient {
 
 func (c *topicViewServiceClient) GetTopicView(ctx context.Context, in *GetTopicViewRequest, opts ...grpc.CallOption) (*resources.TopicView, error) {
 	out := new(resources.TopicView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.TopicViewService/GetTopicView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.TopicViewService/GetTopicView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -153,7 +153,7 @@ func _TopicViewService_GetTopicView_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.TopicViewService/GetTopicView",
+		FullMethod: "/google.ads.googleads.v9.services.TopicViewService/GetTopicView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TopicViewServiceServer).GetTopicView(ctx, req.(*GetTopicViewRequest))
@@ -162,7 +162,7 @@ func _TopicViewService_GetTopicView_Handler(srv interface{}, ctx context.Context
 }
 
 var _TopicViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.TopicViewService",
+	ServiceName: "google.ads.googleads.v9.services.TopicViewService",
 	HandlerType: (*TopicViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

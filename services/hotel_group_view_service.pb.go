@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-// Request message for [HotelGroupViewService.GetHotelGroupView][google.ads.googleads.v0.services.HotelGroupViewService.GetHotelGroupView].
+// Request message for [HotelGroupViewService.GetHotelGroupView][google.ads.googleads.v9.services.HotelGroupViewService.GetHotelGroupView].
 type GetHotelGroupViewRequest struct {
 	// Resource name of the Hotel Group View to fetch.
 	ResourceName         string   `protobuf:"bytes,1,opt,name=resource_name,json=resourceName,proto3" json:"resource_name,omitempty"`
@@ -66,7 +66,7 @@ func (m *GetHotelGroupViewRequest) GetResourceName() string {
 }
 
 func init() {
-	proto.RegisterType((*GetHotelGroupViewRequest)(nil), "google.ads.googleads.v0.services.GetHotelGroupViewRequest")
+	proto.RegisterType((*GetHotelGroupViewRequest)(nil), "google.ads.googleads.v9.services.GetHotelGroupViewRequest")
 }
 
 func init() {
@@ -127,7 +127,7 @@ func NewHotelGroupViewServiceClient(cc *grpc.ClientConn) HotelGroupViewServiceCl
 
 func (c *hotelGroupViewServiceClient) GetHotelGroupView(ctx context.Context, in *GetHotelGroupViewRequest, opts ...grpc.CallOption) (*resources.HotelGroupView, error) {
 	out := new(resources.HotelGroupView)
-	err := c.cc.Invoke(ctx, "/google.ads.googleads.v0.services.HotelGroupViewService/GetHotelGroupView", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/google.ads.googleads.v9.services.HotelGroupViewService/GetHotelGroupView", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -154,7 +154,7 @@ func _HotelGroupViewService_GetHotelGroupView_Handler(srv interface{}, ctx conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/google.ads.googleads.v0.services.HotelGroupViewService/GetHotelGroupView",
+		FullMethod: "/google.ads.googleads.v9.services.HotelGroupViewService/GetHotelGroupView",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(HotelGroupViewServiceServer).GetHotelGroupView(ctx, req.(*GetHotelGroupViewRequest))
@@ -163,7 +163,7 @@ func _HotelGroupViewService_GetHotelGroupView_Handler(srv interface{}, ctx conte
 }
 
 var _HotelGroupViewService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "google.ads.googleads.v0.services.HotelGroupViewService",
+	ServiceName: "google.ads.googleads.v9.services.HotelGroupViewService",
 	HandlerType: (*HotelGroupViewServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
