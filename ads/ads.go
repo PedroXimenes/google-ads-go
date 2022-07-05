@@ -32,11 +32,11 @@ type GoogleAdsClientParams struct {
 }
 
 type googleAdsStorageParams struct {
-	ClientID        string `json:"client_id"`
-	ClientSecret    string `json:"client_secret"`
-	RefreshToken    string `json:"refresh_token"`
-	DeveloperToken  string `json:"developer_token"`
-	LoginCustomerID string `json:"login_customer_id",omitempty`
+	ClientID       string `json:"client_id"`
+	ClientSecret   string `json:"client_secret"`
+	RefreshToken   string `json:"refresh_token"`
+	DeveloperToken string `json:"developer_token"`
+	//LoginCustomerID string `json:"login_customer_id",omitempty`
 }
 
 // NewClient creates a new client with specified credential params
@@ -57,7 +57,7 @@ func NewClient(params *GoogleAdsClientParams) (*GoogleAdsClient, error) {
 	}
 	c.token = newToken
 
-	conn, ctx, err := auth.NewGrpcConnection(c.token, c.developerToken, c.loginCustomerID)
+	conn, ctx, err := auth.NewGrpcConnection(c.token, c.developerToken)
 	if err != nil {
 		return nil, err
 	}
@@ -87,11 +87,11 @@ func ReadCredentialsFile(filepath string) (*GoogleAdsClientParams, error) {
 	json.Unmarshal(file, &g)
 
 	return &GoogleAdsClientParams{
-		ClientID:        g.ClientID,
-		ClientSecret:    g.ClientSecret,
-		RefreshToken:    g.RefreshToken,
-		DeveloperToken:  g.DeveloperToken,
-		LoginCustomerID: g.LoginCustomerID,
+		ClientID:       g.ClientID,
+		ClientSecret:   g.ClientSecret,
+		RefreshToken:   g.RefreshToken,
+		DeveloperToken: g.DeveloperToken,
+		//LoginCustomerID: g.LoginCustomerID,
 	}, nil
 }
 
